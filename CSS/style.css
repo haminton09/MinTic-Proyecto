@@ -1,0 +1,223 @@
+:root {
+  --nyanza: #d8f3dcff;
+  --celadon: #b7e4c7ff;
+  --celadon-2: #95d5b2ff;
+  --mint: #74c69dff;
+  --mint-2: #52b788ff;
+  --sea-green: #40916cff;
+  --dartmouth-green: #2d6a4fff;
+  --brunswick-green: #1b4332ff;
+  --dark-green: #081c15ff;
+  --coral: #ffd050;
+  --sol: #ffff00;
+  --footer-hover: #d6324e;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  height: 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /*
+  background: var(--dartmouth-green);*/
+  background: linear-gradient(
+    to left,
+    var(--dartmouth-green),
+    var(--mint-2),
+    var(--mint)
+  );
+  padding: 1rem 1rem;
+  color: var(--mint-2);
+}
+#lema {
+  font-family: "Poppins";
+  font-size: 1.3rem;
+  color: #0c5c2e;
+}
+#lema span {
+  font-size: 30px;
+}
+.logo {
+  font-size: 2.1rem;
+  color: var(--sol);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: var(--celadon);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-links :hover {
+  font-size: 1.4rem;
+  color: var(--coral);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+/* Responsive */
+
+/*main {
+}*/
+body {
+  text-align: justify;
+  font-family: "Popping";
+  font-size: 1.2rem;
+  /*background-color:#a1e7e1;*/
+  background: linear-gradient(to right, #5aa19b, #fff);
+  padding: 15px;
+  color: #135370;
+  line-height: 1.7;
+}
+body h3 {
+  color: #191970;
+  text-align: center;
+}
+body img {
+  width: 90%;
+  height: auto;
+  margin-left: 4%;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgb(80, 88, 206);
+  opacity: 0.8;
+}
+.definicion {
+  margin: 20px;
+}
+.ventajas,
+.desventajas {
+  padding: 15px 25px;
+}
+ul li {
+  margin-bottom: 7px;
+}
+
+body ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+.footer {
+  background-color: var(--sea-green);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer .social {
+  margin-bottom: 10px;
+}
+
+.footer .social a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 25px;
+  transition: color 0.3s ease;
+}
+.footer h4 {
+  margin: 10px;
+  padding: 10px;
+}
+
+.footer .social h5 a:hover {
+  color: var(--footer-hover);
+}
+#facebook :hover {
+  color: #084da7;
+}
+#twitter :hover {
+  color: #1da1f2;
+}
+#instagram:hover {
+  color: #9e37b8;
+}
+#linkedin :hover {
+  color: #0b66c3;
+}
+@media (max-width: 820px) {
+  #lema {
+    visibility: hidden;
+  }
+  .logo {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .tipo1,
+  .tipo2,
+  .comparacion {
+    line-height: 1.7;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .parrafo1,
+  .parrafo2 {
+    width: 48vw;
+    height: auto;
+    margin: 3%;
+  }
+  .img1,
+  .img2 {
+    width: 49vw;
+    height: auto;
+    margin: 1%;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--brunswick-green);
+    flex-direction: column;
+    display: none;
+  }
+
+  #toggle-menu:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  #lema span {
+    font-size: 25px;
+  }
+
+  .footer .social a {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+
+  .footer {
+    padding: 15px;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+}
